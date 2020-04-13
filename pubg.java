@@ -43,6 +43,12 @@
 // #  First player attack second player. [2, 1, 0]
 // #  Second player attack first player twice. [0, 1, 0]
 
+// 
+// let’s consider if there were only 2 people with strength A and B with (A<=B). then A would attack B, leading to A, B-A.
+// it would continue until it get smaller than A or A, B%A. then process would repeat as A%(B%A), B%A and so on…
+// 
+// You can see this is exactly what is done in euclid GCD algorithm. So, answer is always gcd of numbers. 
+
 public class Pubg {
     public int pubg(int[] A) {
         int len = A.length;
